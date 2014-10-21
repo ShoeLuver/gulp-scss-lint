@@ -82,6 +82,7 @@ var gulpScssLint = function (options) {
     if (options.reporterOutput) {
       fs.writeFile(options.reporterOutput, xmlReport);
     }
+    stream.emit('end');
   }
 
   function defaultLintResult() {
